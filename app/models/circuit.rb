@@ -13,4 +13,8 @@
 #
 class Circuit < ApplicationRecord
   has_many :grand_prixes
+
+  validates :name, :location, :circuit_length, :capacity, :type, presence: true
+
+  enum :type, { permanent: 0, semi_permanent: 1, street: 2 }, default: :permanent
 end

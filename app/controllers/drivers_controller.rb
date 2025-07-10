@@ -46,6 +46,6 @@ class DriversController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def driver_params
-      params.expect(driver: [ :name, :number, :nationality, :birthday, :role, :team_id ])
+      params.expect(driver: [ :first_name, :last_name, :common_name, :number, :nationality, :birthday, :role, :team_id ])
     end
 end

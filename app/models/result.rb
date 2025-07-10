@@ -28,4 +28,6 @@ class Result < ApplicationRecord
   belongs_to :grand_prix
   belongs_to :driver
   belongs_to :team
+
+  validates :laps, :points, :position, :driver_id, :grand_prix_id, :team_id, presence: true
 end

@@ -9,4 +9,6 @@
 #
 class Season < ApplicationRecord
   has_many :grand_prixes
+
+  validates :year, presence: true
 end

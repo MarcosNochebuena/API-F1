@@ -25,4 +25,8 @@
 class Driver < ApplicationRecord
   belongs_to :team
   has_many :results
+
+  validates :first_name, :last_name, :common_name, :nationality, :number, :role, :team_id, presence: true
+
+  enum :role, { first_driver: 0, second_driver: 1, reserve_driver: 2 }, default: :first_driver
 end

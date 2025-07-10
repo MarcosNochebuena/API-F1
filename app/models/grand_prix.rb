@@ -26,4 +26,6 @@ class GrandPrix < ApplicationRecord
   belongs_to :circuit
   belongs_to :season
   has_many :results
+
+  validates :name, :date, :total_laps, :round, :circuit_id, :season_id, presence: true
 end

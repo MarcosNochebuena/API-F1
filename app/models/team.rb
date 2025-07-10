@@ -15,4 +15,6 @@ class Team < ApplicationRecord
   has_many :drivers
   has_one :team_principal
   has_many :results
+
+  validates :name, :base, :country, :engine, :founded, presence: true
 end

@@ -22,4 +22,6 @@
 #
 class TeamPrincipal < ApplicationRecord
   belongs_to :team
+
+  validates :first_name, :last_name, :common_name, :nationality, :birthday, :team_id, presence: true
 end
